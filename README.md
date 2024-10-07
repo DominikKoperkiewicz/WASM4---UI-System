@@ -15,9 +15,9 @@ import * as UI from "./UI";
 You can also clone this repository and setup it to check example use of UI. You can find instructions for project setup in official documentation: 
 https://wasm4.org/docs/getting-started/setup
 
-### Usage
+## **Usage**
 
-1. **Mouse Input**:
+### Mouse Input
    The `Mouse` class provides utilities to track the mouse's current and previous state, including its position and button states.
 
 
@@ -32,8 +32,8 @@ https://wasm4.org/docs/getting-started/setup
      // *** Your code ***
    }
    ```
-   
-3. **UIElement**
+
+### UIElement
   Every UI element extends `UIElement` class. You can also make your own custom elements this way.  An example class could look like this:
    ```typescript
 
@@ -62,7 +62,7 @@ https://wasm4.org/docs/getting-started/setup
     }
    ```
 
-4. **Window**
+### Window
   Window element is a container in which you can put any other UI element (also other windows). When window update is called, it's going to automaticaly update/render all childeren elements unless it's set as hidden. Element `x` and `y` position is relative to parent.
 
    ```typescript
@@ -72,7 +72,7 @@ https://wasm4.org/docs/getting-started/setup
    window.append(button); // Set button as window child
    ```
    
-2. **Text**
+### Text
    Text element can be use to add for example section title. You can set text as centered, but right now alignment functionality is limited. 
 
    ```typescript
@@ -85,26 +85,7 @@ https://wasm4.org/docs/getting-started/setup
    ```typescript
    UI.Text.write("Some text", 0, 0, 0x23);
    ```
-   
-### Example Code
 
-Here's an example of how to use the library in your WASM-4 project:
-
-```typescript
-import * as w4 from "./wasm4";
-import { Mouse, Text, update } from "./UI";
-
-export function update(): void {
-    // Update mouse input
-    Mouse.update();
-
-    // Create and render text
-    let title = new Text();
-    title.text = "UI Library Example";
-    title.centered = true;
-    title.update(80, 40); // Position the text at (80, 40)
-}
-```
 
 ### API Documentation
 
@@ -118,21 +99,9 @@ export function update(): void {
 #### UIElement Class
 - `x`, `y`: Position of the element.
 - `hidden`: Visibility of the element.
-- `update(x: i16, y: i16)`: Updates the position of the element.
+- `update(x: i16, y: i16)`:  Refreshes the UI element.
 
 #### Text Class (extends UIElement)
 - `text`: The string of text to be displayed.
 - `centered`: Whether the text should be centered or not.
-- `update(x: i16, y: i16)`: Updates the position of the text.
-
-## Contributing
-
-If you want to contribute to this project, feel free to submit issues or pull requests. All contributions are welcome!
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-This should give your library a solid README that explains its purpose and usage. Let me know if you'd like to tweak anything!
+- `update(x: i16, y: i16)`: Refreshes the UI element.
