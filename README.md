@@ -16,7 +16,7 @@ This library provides a simple and efficient way to create basic UI components f
   - [Mouse Class](#mouse-class)
   - [UIElement Class](#uielement-class)
   - [Text Class](#text-class-extends-uielement)
-- 
+  
 ## Getting Started
 
 ### Installation
