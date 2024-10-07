@@ -8,7 +8,7 @@ This library provides a simple and efficient way to create basic UI components f
   - [Installation](#installation)
 - [Usage](#usage)
    - [Mouse Input](#mouse-input)
-   - [UIElement](#ui-element)
+   - [UIElement](#uielement)
    - [Window](#window)
    - [Text](#text)
    - [Slider](#slider)
