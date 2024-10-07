@@ -1,5 +1,5 @@
 import * as w4 from "./wasm4";
-import * as UI from "./UI"
+import * as UI from "./UI";
 
 
 // MAIN WINDOW SETUP
@@ -12,7 +12,7 @@ mainWindow.append(grabButton);
 let windowTitle: UI.Text = new UI.Text( 3, 3, "Window", false);
 mainWindow.append(windowTitle);
 
-let sliderA: UI.Slider = new UI.Slider( 3, 27, "Slide", 84, 0, 100, 50);
+let sliderA: UI.Slider = new UI.Slider( 3, 27, "Slider", 84, 0, 100, 50);
 mainWindow.append(sliderA);
 
 
@@ -31,15 +31,14 @@ let buttonC: UI.Button = new UI.Button( 59, 7, "C", 8);
 paddingSection.append(buttonC);
 
 
-
 // HIDE SECTION SETTUP
 
 let hideButton: UI.Button = new UI.Button( 3, 85, "Hide", 2);
 mainWindow.append(hideButton);
 
-
 let smallWindow: UI.Window = new UI.Window( 28, 85, 58, 40, 0x41);
 mainWindow.append(smallWindow);
+
 
 let smallWindowTitle: UI.Text = new UI.Text( 3, 3, "Window 2", false);
 smallWindow.append(smallWindowTitle);
@@ -106,7 +105,7 @@ export function update (): void {
     UI.update(); // !!! Necessary for UI interactions !!!
 
     mainWindow.update( 0, 0); // Rendering and updating main window and all it's children
-    settingsWindow.update(0,0);
+    settingsWindow.update( 0, 0);
 
     // Window grab action
     if(grabButton.isHold) {
