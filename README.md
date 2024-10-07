@@ -2,6 +2,21 @@
 
 This library provides a simple and efficient way to create basic UI components for [WASM-4](https://wasm4.org/) projects using AssemblyScript. It includes support for mouse handling and UI elements such as text rendering, buttons and sliders.
 
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Usage](#usage)
+   - [Mouse Input](#mouse-input)
+   - [UIElement](#ui-element)
+   - [Window](#window)
+   - [Text](#text)
+   - [Slider](#slider)
+- [API Documentation](#api-documentation)
+  - [Mouse Class](#mouse-class)
+  - [UIElement Class](#uielement-class)
+  - [Text Class](#text-class-extends-uielement)
+- 
 ## Getting Started
 
 ### Installation
@@ -87,7 +102,23 @@ https://wasm4.org/docs/getting-started/setup
    ```
 
 
-### API Documentation
+### Slider
+   For sliders you can define value range, width and name displayed above. There are buttons for increasing and decreasing value preciesly. 
+   
+   ```typescript
+   let slider: UI.Slider = new UI.Slider( 0, 0, "Slider name", 90, 0, 100, 50); // new UI.Slider( x, y, name, width, min, max, default value);
+
+   export function update (): void {
+    UI.update(); 
+    slider.update();
+
+    volume = slider.value;
+   }
+   
+   ```
+
+
+## API Documentation
 
 #### Mouse Class
 - `Mouse.x`: X coordinate of the mouse.
